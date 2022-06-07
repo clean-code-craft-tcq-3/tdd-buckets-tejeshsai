@@ -1,0 +1,2 @@
+def getRangeDetails(range):
+    pass
