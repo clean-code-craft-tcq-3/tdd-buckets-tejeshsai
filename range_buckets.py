@@ -3,6 +3,11 @@ from range import Range
 rangeRecords = []
 
 
+def isConsecutive(number1, number2):
+    difference = number2 - number1
+    return (difference == 0 or difference == 1)
+
+
 def getRangeDetails(rangeArray):
     numberOfRanges = 0
     numberOfConsecutiveNumbers = 1
@@ -10,7 +15,7 @@ def getRangeDetails(rangeArray):
     rangeEndNumber = rangeArray[0]
 
     for index in range(0, len(rangeArray)-1):
-        if(rangeArray[index+1]-rangeArray[index] == 0 or rangeArray[index+1]-rangeArray[index] == 1):
+        if(isConsecutive(rangeArray[index], rangeArray[index+1])):
             numberOfConsecutiveNumbers += 1
             rangeEndNumber = rangeArray[index+1]
         else:
