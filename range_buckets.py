@@ -1,5 +1,7 @@
 from range import Range
 
+rangeRecords = []
+
 
 def isConsecutive(number1, number2):
     difference = number2 - number1
@@ -7,6 +9,7 @@ def isConsecutive(number1, number2):
 
 
 def getRangeDetails(rangeArray):
+    global rangeRecords
     rangeRecords = []
     numberOfConsecutiveNumbers = 1
     rangeFirstNumber = rangeArray[0]
@@ -33,4 +36,9 @@ def getRangeDetails(rangeArray):
 
 
 def printRangeDetails(rangeArray):
-    pass
+    numberOfRanges = getRangeDetails(rangeArray)
+    print("Range", "Details")
+    for rangeItem in rangeRecords:
+        print(rangeItem.firstNumber, "-", rangeItem.endNumber,
+              ", ", rangeItem.noOfReadings)
+    return numberOfRanges
