@@ -30,3 +30,7 @@ def getRangeDetails(rangeArray):
         rangeFirstNumber, rangeEndNumber, numberOfConsecutiveNumbers)
     rangeRecords.append(newRangeRecord)
     return len(rangeRecords)
+
+
+def printRangeDetails(rangeArray):
+    pass
