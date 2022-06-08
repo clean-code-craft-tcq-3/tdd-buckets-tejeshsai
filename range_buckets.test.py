@@ -12,6 +12,8 @@ class RangeBucketTest(unittest.TestCase):
         self.assertTrue(range_buckets.printRangeDetails([4, 5]) == 1)
         self.assertTrue(range_buckets.printRangeDetails(
             [7, 9, 8, 4, 3, 2]) == 2)
+        self.assertTrue(range_buckets.printRangeDetails(
+            [8, 9, 10, 1, 11, 2, 5, 7]) == 3)
 
 
 if __name__ == '__main__':
