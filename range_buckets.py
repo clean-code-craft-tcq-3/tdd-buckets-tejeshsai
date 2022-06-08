@@ -12,10 +12,11 @@ def getRangeDetails(rangeArray):
     global rangeRecords
     rangeRecords = []
     numberOfConsecutiveNumbers = 1
-    rangeFirstNumber = rangeArray[0]
-    rangeEndNumber = rangeArray[0]
 
     rangeArray.sort()
+
+    rangeFirstNumber = rangeArray[0]
+    rangeEndNumber = rangeArray[0]
 
     for index in range(0, len(rangeArray)-1):
         if(isConsecutive(rangeArray[index], rangeArray[index+1])):
