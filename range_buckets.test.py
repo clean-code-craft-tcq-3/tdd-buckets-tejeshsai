@@ -10,6 +10,8 @@ class RangeBucketTest(unittest.TestCase):
 
     def test_print_range_details(self):
         self.assertTrue(range_buckets.printRangeDetails([4, 5]) == 1)
+        self.assertTrue(range_buckets.printRangeDetails(
+            [7, 9, 8, 4, 3, 2]) == 2)
 
 
 if __name__ == '__main__':
