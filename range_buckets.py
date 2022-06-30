@@ -1,7 +1,7 @@
 from range import Range
+from convertA_to_D import convertAmpsListToDigital, convertAmpsToDigital
 
 rangeRecords = []
-
 
 def isConsecutive(number1, number2):
     difference = number2 - number1
@@ -43,3 +43,7 @@ def printRangeDetails(rangeArray):
         print(rangeItem.firstNumber, "-", rangeItem.endNumber,
               ", ", rangeItem.noOfReadings)
     return numberOfRanges
+
+def getRangesForAmpsLists(AmpsArray):
+    digitalValuesList = convertAmpsListToDigital(AmpsArray)
+    return getRangeDetails(digitalValuesList)
